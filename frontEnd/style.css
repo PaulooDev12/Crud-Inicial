@@ -167,13 +167,15 @@ body{
     transition: 0.25s;
 }
 .field input:hover{
-    background-color: #202226;
+    background-color: rgba(32, 34, 38, 5);
+    backdrop-filter: blur(4px);
 }
 
 .field1 input:focus{
     border-color: var(--primary);
 
-    background-color: #202226;
+    background-color: rgba(32, 34, 38, 5);
+    backdrop-filter: blur(4px);
 
     box-shadow: 0 0 0 3px rgba(88,101,242,0.20);
 }
@@ -303,4 +305,222 @@ button:active{
     50%{ transform: translateX(4px); }
     75%{ transform: translateX(-4px); }
     100%{ transform: translateX(0); }
+}
+.btn-delete{
+    display: flex;
+    margin-top: 15px;
+    margin-left: 100px;
+    margin-bottom: 15px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--danger);
+    width: 200px;
+    height: 30px;
+    margin-bottom: 10px;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    left: 0;
+    transition: background-color 0.2s ease;
+}
+.btn-delete:hover{
+    background-color: #ff5c5c;
+    transform: translateY(-0.5px);
+}
+.btn-update{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary);
+    margin-left: 100px;
+    margin-bottom: 15px;
+    width: 200px;
+    height: 30px;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    left: 0;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.2s ease;
+}
+.btn-update:hover{
+    background-color: var(--primary-hover);
+    transform: translateY(-0.5px);
+}
+.popup-container{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+
+    z-index: 1000;
+}
+.popup-box{
+    position: relative;
+    gap: 22px;
+    background-color: var(--card);
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    width: 800px;
+    animation: aparecer 0.3s ease;
+}
+
+
+.popup-box input{
+    width: 100%;
+
+    padding: 18px 14px 10px;
+
+    border-radius: 10px;
+
+    border: 1px solid transparent;
+
+    background-color: var(--input);
+
+    color: var(--text);
+
+    outline: none;
+
+    font-size: 15px;
+
+    transition: 0.25s;
+}
+
+.popup-box input{
+    width: 100%;
+
+    padding: 18px 14px 10px;
+
+    border-radius: 10px;
+
+    border: 1px solid transparent;
+
+    background-color: var(--input);
+
+    color: var(--text);
+    margin-bottom: 20px;
+    outline: none;
+    gap: 22px;
+    font-size: 15px;
+
+    transition: 0.25s;
+}
+.popup-box h2{
+    margin-bottom: 15px;
+}
+.popup-box input:hover{
+    background-color: rgba(32, 34, 38, 5);
+    backdrop-filter: blur(4px);
+}
+
+.popup-box input:focus{
+    border-color: var(--primary);
+
+    background-color: rgba(32, 34, 38, 5);
+    backdrop-filter: blur(4px);
+
+    box-shadow: 0 0 0 3px rgba(88,101,242,0.20);
+}
+.popup-field{
+    position: relative;
+    width: 100%;
+}
+.popup-field label{
+    position: absolute;
+
+    left: 14px;
+    top: 35%;
+
+    transform: translateY(-50%);
+
+    color: var(--text-muted);
+
+    pointer-events: none;
+
+    transition: 0.2s ease;
+
+    background-color: transparent;
+
+    padding: 0 4px;
+}
+
+.popup-field input:focus + label,
+.popup-field input:not(:placeholder-shown) + label{
+    top: 0;
+
+    font-size: 12px;
+
+    background-color: var(--card);
+
+    color: var(--primary);
+}
+.popup-field1{
+    position: relative;
+    width: 100%;
+}
+.popup-field1 label{
+    position: absolute;
+
+    left: 14px;
+    top: 30%;
+
+    transform: translateY(-50%);
+
+    color: var(--text-muted);
+
+    pointer-events: none;
+
+    transition: 0.2s ease;
+
+    background-color: transparent;
+
+    padding: 0 4px;
+}
+
+.popup-field1 input:focus + label,
+.popup-field1 input:not(:placeholder-shown) + label{
+    top: 0;
+
+    font-size: 12px;
+
+    background-color: var(--card);
+
+    color: var(--primary);
+}
+.popup-box button{
+    width: 100%;
+    height: 46px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    transition: 0.2s ease;
+    background-color: var(--primary);
+    margin-bottom: 20px;
+}
+
+@keyframes aparecer{
+    from{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

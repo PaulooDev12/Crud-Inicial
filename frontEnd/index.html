@@ -41,6 +41,24 @@
         <ul id="lista"></ul>
 
     </div>
+    <div class="popup-container" id="popup">
+        <div class="popup-box">
+            <h2>Editar Usuário</h2>
+            <div class="popup-field">
+            <input id="novo-nome" placeholder=" " maxlength="39" required>
+            <label for="novo-nome">Novo nome</label>
+            </div>
+            
+            <div class="popup-field1">
+            <input id="novo-email" placeholder=" " maxlength="255" required>
+            <label for="novo-email">Novo Email</label>
+            </div>       
+            
+
+            <button id="salvar" onclick="salvarEdicao(id)">Salvar</button>
+            <button id="cancelar" onclick="fecharPopUp()">Cancelar</button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
